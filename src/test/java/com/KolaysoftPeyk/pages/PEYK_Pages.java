@@ -140,6 +140,39 @@ public class PEYK_Pages {
     @FindBy(xpath = "//span[contains(text(),'PDF imzalandı ve gönderiliyor')]")
     public WebElement pdfGonderiliyor;
 
+    @FindBy(xpath = "//label[contains(text(),'Form Gönder')]")
+    public WebElement anaFormGonder;
+
+    @FindBy(xpath = "//input[@accept='.pdf']")
+    public WebElement pdfUzantili;
+
+    @FindBy(xpath = "//button[contains(text(), 'Doküman(lar)ı Yükle')]")
+    public WebElement dokumanYukle;
+
+    @FindBy(xpath = "//button[contains(text(), 'Doküman Ekle')]")
+    public WebElement dokumanEkle;
+
+    @FindBy(xpath = "//textarea[@rows='3']")
+    public WebElement ePostaKonusu;
+
+    @FindBy(xpath = "//textarea[@rows='6']")
+    public WebElement ePostaIcerigi;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[4]")
+    public WebElement ucKisininMetni;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[6]")
+    public WebElement aliVeliPdf;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    public WebElement sablonsuz1;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[4]")
+    public WebElement sablonsuz2;
+
+    @FindBy(xpath = "//td[contains(text(),'Kayıt bulunamadı.')]")
+    public WebElement kayitBulunamadi;
+
 
     // Islem Gecmisi
     @FindBy(xpath = "//span[contains(text(), \"İşlem Geçmişi\")]")
