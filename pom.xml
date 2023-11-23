@@ -77,7 +77,6 @@
                     <configuration>
                         <includes>
                             <include>**/*PeykRunner.java</include>
-                            <runOrder>Alphabetical</runOrder>
                         </includes>
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
