@@ -75,6 +75,10 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M5</version>
                     <configuration>
+                        <includes>
+                            <include>**/*PeykRunner.java</include>
+                            <runOrder>Alphabetical</runOrder>
+                        </includes>
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
