@@ -240,6 +240,40 @@ public class PEYK_Pages {
     @FindBy(xpath = "//button[@label='Özlük İndir']")
     public WebElement ozlukIndir;
 
+    @FindBy(xpath = "(//i[@class=' fa fa fa-upload'])[1]")
+    public WebElement kirmiziBtn;
+
+    @FindBy(xpath = "//input[@id='files']")
+    public WebElement dosyaSec;
+
+    @FindBy(xpath = "//input[@id='react-select-2-input']")
+    public WebElement ozlukSecme;
+
+    @FindBy(xpath = "//input[@id='react-select-3-input']")
+    public WebElement yuklenecekYer;
+
+    @FindBy(xpath = "//span[contains(text(),\"Kaydet\")]")
+    public WebElement kaydet2;
+
+    @FindBy(xpath = "//button[contains(text(),\"DEĞİŞTİR\")]")
+    public WebElement degistir;
+
+    @FindBy(xpath = "(//i[@class=' fa fa fa-edit'])[1]")
+    public WebElement maviBtn;
+
+    @FindBy(xpath = "(//input[@role='combobox'])[6]")
+    public WebElement ozlukSec;
+
+    @FindBy(xpath = "//button[@label='Düzenle']")
+    public WebElement duzenle;
+
+    @FindBy(xpath = "//textarea[@id='root_Metin Alanı']")
+    public WebElement metinAlani;
+
+    @FindBy(xpath = "//button[@label='Kaydet']")
+    public WebElement kaydet3;
+
+
 
     // Rolislemleri
     @FindBy(xpath = "//p[contains(text(), \"Rol İşlemleri\")]")
@@ -247,6 +281,21 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "//span[contains(text(), \" Rol Oluşturma\")]")
     public WebElement rolOlusturma;
+
+    @FindBy(xpath = "//button[@label='Rol Oluştur']")
+    public WebElement rolOlustur;
+
+    @FindBy(xpath = "//input[@name='roleName']")
+    public WebElement rolAdi;
+
+    @FindBy(xpath = "//button[@title='Kaydet']")
+    public WebElement kaydet4;
+
+    @FindBy(xpath = "//td[contains(text(),\"Peyk\")]")
+    public WebElement rolPeyk;
+
+    @FindBy(xpath = "(//i[@class=' fa fa-trash'])[1]")
+    public WebElement sil;
 
     @FindBy(xpath = "//h4[contains(text(), \"Rol Listesi\")]")
     public WebElement rolListesi;
@@ -256,6 +305,12 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "//h4[contains(text(), \"Personel Listesi\")]")
     public WebElement personelListesi;
+
+    @FindBy(xpath = "(//button[@title='Personele Rol Ekle'])[1]")
+    public WebElement personeleRolEkle;
+
+    @FindBy(xpath = "(//input[@aria-expanded='false'])[5]")
+    public WebElement rolSec;
 
 
     // Tanimlar
