@@ -28,16 +28,16 @@ public class PEYK_UcretBordrosuStepDefinitions extends Driver{
         peyk_pages.ucretBordrosu.click();
         BrowserUtils.waitFor(3);
         //String ucretBordrosu = peyk_pages.ucretBordrosuYukle.getText();
-        Assert.assertEquals(peyk_pages.ucretBordrosuYukle.getText(),"Ücret Bordrosu Yükle");
+        Assert.assertEquals(peyk_pages.ucretBordrosuYukle2.getText(),"Ücret Bordrosu Yükle");
         BrowserUtils.waitFor(2);
 
 
     }
     @Diyelimki(": Ücret Bordrosu Yüklemek isteyip,Ücret Bordrosu Yükleye tıklayıp,")
     public void ücret_bordrosu_yüklemek_isteyip_ücret_bordrosu_yükleye_tıklayıp() {
-        peyk_pages.ucretBordrosuYukle.click();
+        peyk_pages.ucretBordrosuYukle2.click();
         BrowserUtils.waitFor(2);
-        String ucBordYuk = peyk_pages.ucretBordrosuYukle.getText();
+        String ucBordYuk = peyk_pages.ucretBordrosuYukle2.getText();
         Assert.assertEquals(ucBordYuk,"Ücret Bordrosu Yükle");
         BrowserUtils.waitFor(2);
     }
@@ -47,7 +47,7 @@ public class PEYK_UcretBordrosuStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         peyk_pages.tem.click();
         peyk_pages.evet.click();
-        BrowserUtils.waitFor(3);
+        BrowserUtils.waitFor(1);
 
         //peyk_pages.bordroPdfYukleyiniz.click();
         //BrowserUtils.waitFor(2);

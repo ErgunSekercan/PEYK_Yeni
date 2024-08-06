@@ -50,6 +50,8 @@ public class PEYK_FormStepDefinitions extends Driver{
         BrowserUtils.waitFor(3);
         peyk_pages.imzalaGonder.click();
         BrowserUtils.waitFor(1);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(5);
         try {
             String pin = peyk_pages.pin.getText();
             BrowserUtils.waitFor(2);
@@ -62,10 +64,10 @@ public class PEYK_FormStepDefinitions extends Driver{
         }catch (Exception e){
             System.out.println("E-imza bulunmamaktadır!");
         }
-        peyk_pages.imzala.click();
+        /*peyk_pages.imzala.click();
         BrowserUtils.waitFor(2);
         peyk_pages.evet.click();
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(5);*/
         Assert.assertEquals(peyk_pages.pdfGonderiliyor.getText(),"PDF imzalandı ve gönderiliyor");
         BrowserUtils.waitFor(2);
 
@@ -97,7 +99,7 @@ public class PEYK_FormStepDefinitions extends Driver{
         peyk_pages.calisanSecimi.click();
         BrowserUtils.waitFor(1);
         peyk_pages.aliVeli.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(3);
         peyk_pages.kaydet.click();
         BrowserUtils.waitFor(1);
         peyk_pages.onayla.click();
@@ -114,6 +116,8 @@ public class PEYK_FormStepDefinitions extends Driver{
         peyk_pages.sablonsuz2.click();
         peyk_pages.imzalaGonder.click();
         BrowserUtils.waitFor(1);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(5);
         try {
             String pin = peyk_pages.pin.getText();
             BrowserUtils.waitFor(2);
@@ -122,19 +126,22 @@ public class PEYK_FormStepDefinitions extends Driver{
                 peyk_pages.eImzaPassword.click();
                 peyk_pages.eImzaPassword.sendKeys("3944");
                 BrowserUtils.waitFor(2);
+                peyk_pages.imzala.click();
+                BrowserUtils.waitFor(2);
+                peyk_pages.evet.click();
+                BrowserUtils.waitFor(5);
+                peyk_pages.refresh.click();
+                BrowserUtils.waitFor(1);
             }
         }catch (Exception e){
             System.out.println("E-imza bulunmamaktadır!");
         }
-        peyk_pages.imzala.click();
-        BrowserUtils.waitFor(2);
-        peyk_pages.evet.click();
-        BrowserUtils.waitFor(5);
-        org.junit.Assert.assertEquals(peyk_pages.kayitBulunamadi.getText(),"Kayıt bulunamadı.");
+
+        Assert.assertEquals(peyk_pages.kayitBulunamadi.getText(),"Kayıt bulunamadı.");
         BrowserUtils.waitFor(2);
 
     }
-    @Eğerki(": Form İşlemlerine tıklarsanız Form Gönder seçeneğine ulaşabilirsiniz")
+    @Eğerki(": Form İşlemlerine tıklarsanız PDF Oluşturuldu safhasındaki formları Form Gönder veya Toplu Form Gönder seçeneğiyle gönderebilir daha önce gönderilmiş formların durumlarını görüntüleyebilirsiniz")
     public void forma_i̇şlemlerine_tıklarsanız_form_gönder_seçeneğine_ulaşabilirsiniz() {
         peyk_pages.formIslemleri.click();
         BrowserUtils.waitFor(2);

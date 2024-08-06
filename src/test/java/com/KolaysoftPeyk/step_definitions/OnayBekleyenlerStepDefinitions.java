@@ -5,6 +5,7 @@ import com.KolaysoftPeyk.utility.BrowserUtils;
 import com.KolaysoftPeyk.utility.ConfigurationReader;
 import com.KolaysoftPeyk.utility.Driver;
 import io.cucumber.java.tr.Eğerki;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class OnayBekleyenlerStepDefinitions extends Driver{
@@ -23,6 +24,19 @@ public class OnayBekleyenlerStepDefinitions extends Driver{
         String onayBek = peyk_pages.onayBekleyenler.getText();
         Assert.assertEquals(onayBek,"Onay Bekleyenler");
         BrowserUtils.waitFor(3);
+
+        try {
+
+            if (peyk_pages.onayBekleyen1.isDisplayed()) {
+                peyk_pages.onayBekleyen1.click();
+                peyk_pages.secilenleriOnayla.click();
+                BrowserUtils.waitFor(2);
+                peyk_pages.evet.click();
+                BrowserUtils.waitFor(2);
+            }
+        }catch (Exception e){
+            System.out.println("Kayıt bulunamadı");
+        }
 
         peyk_pages.kullanici.click();
         peyk_pages.cikis.click();

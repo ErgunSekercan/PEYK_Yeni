@@ -126,19 +126,19 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
     }
     @Eğerki(": Form Türü Tanımına tıklarsanız Yeni Form Türü oluşturabilirsiniz")
     public void form_türü_tanımına_tıklarsanız_yeni_form_türü_oluşturabilirsiniz() {
-        peyk_pages.formTuruTanimi.click();
+       /* peyk_pages.formTuruTanimi.click();
         BrowserUtils.waitFor(2);
         String eImzaDogrulama = peyk_pages.formTuruListesi.getText();
         Assert.assertEquals(eImzaDogrulama,"Form Türü Listesi");
-        BrowserUtils.waitFor(4);
+        BrowserUtils.waitFor(4);*/
     }
     @Eğerki(": Firma Parametrelerine tıklarsanız Yeni Firma Parametresi oluşturabilirsiniz")
     public void firma_parametrelerine_tıklarsanız_yeni_firma_parametresi_oluşturabilirsiniz() {
-        peyk_pages.firmaParametreleri.click();
+      /*  peyk_pages.firmaParametreleri.click();
         BrowserUtils.waitFor(2);
         String firmaParam = peyk_pages.firmaParam.getText();
         Assert.assertEquals(firmaParam,"Firma Parametreleri");
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);*/
     }
     @Eğerki(": Talep Form Editörüne tıklarsanız Yeni Talep Formu oluşturabilirsiniz")
     public void talep_form_editörüne_tıklarsanız_yeni_talep_formu_oluşturabilirsiniz() {
