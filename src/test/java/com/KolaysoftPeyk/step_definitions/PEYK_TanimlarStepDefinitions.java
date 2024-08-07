@@ -7,6 +7,9 @@ import com.KolaysoftPeyk.utility.Driver;
 import io.cucumber.java.tr.Eğerki;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class PEYK_TanimlarStepDefinitions extends Driver{
 
     PEYK_Pages peyk_pages = new PEYK_Pages();
@@ -40,31 +43,89 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         String departList = peyk_pages.departmanListesi.getText();
         Assert.assertEquals(departList,"Departman Listesi");
         BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanSeciniz.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.merkezDepartman.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.turSeciniz.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.turSube.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanAdi.sendKeys("Kolaysoft");
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanKodu.sendKeys("001");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet4.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanSil.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(2);
     }
     @Eğerki(": Departman Tür Tanımına tıklarsanız Departman Türü Listesine ulaşıp Yeni Departman Türü oluşturabilirsiniz")
     public void departman_tür_tanımına_tıklarsanız_departman_türü_listesine_ulaşıp_yeni_departman_türü_oluşturabilirsiniz() {
         peyk_pages.departmanTurTanimi.click();
         BrowserUtils.waitFor(2);
-        String depturu = peyk_pages.departmanTuru.getText();
+        String depturu = peyk_pages.departmanTuruListesi.getText();
         Assert.assertEquals(depturu,"Departman Türü Listesi");
+        BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanTuruOlustur.sendKeys("Bilkent");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet4.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.departmanTuruSil.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": Çalışan Tanımlarına tıklarsanız Çalışanlara ve Çalışan Şifre Yönetimine ulaşabilirsiniz")
-    public void çalışan_tanımlarına_tıklarsanız_çalışanlara_ve_çalışan_şifre_yönetimine_ulaşabilirsiniz() {
+    public void çalışan_tanımlarına_tıklarsanız_çalışanlara_ve_çalışan_şifre_yönetimine_ulaşabilirsiniz() throws AWTException {
         peyk_pages.calisanTanimlari.click();
         BrowserUtils.waitFor(2);
         String calisanlar = peyk_pages.calisanlar.getText();
         Assert.assertEquals(calisanlar,"Çalışanlar");
         BrowserUtils.waitFor(2);
 
-
     }
     @Eğerki(": Çalışanlara tıklarsanız Çalışan Listesine ulaşabilir Yeni Çalışan Oluşturabilir Çoklu İşlemler yapabilirsiniz")
-    public void çalışanlara_tıklarsanız_çalışan_listesine_ulaşabilir_yeni_çalışan_oluşturabilir_çoklu_i̇şlemler_yapabilirsiniz() {
+    public void çalışanlara_tıklarsanız_çalışan_listesine_ulaşabilir_yeni_çalışan_oluşturabilir_çoklu_i̇şlemler_yapabilirsiniz() throws AWTException {
         peyk_pages.calisanlar.click();
         BrowserUtils.waitFor(2);
         String calisanListesi = peyk_pages.calisanListesi.getText();
         Assert.assertEquals(calisanListesi,"Çalışan Listesi");
+        BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.calisanAdi.sendKeys("Yıldırım");
+        BrowserUtils.waitFor(2);
+        peyk_pages.calisanSoyadi.sendKeys("Tufan");
+        BrowserUtils.waitFor(2);
+        peyk_pages.calisanTckn.sendKeys("76789134724");
+        BrowserUtils.waitFor(2);
+        peyk_pages.departman.sendKeys("Merkez");
+        BrowserUtils.waitFor(2);
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.bildirimTuru.sendKeys("SMS");
+        BrowserUtils.waitFor(2);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.telefonNumarasi.sendKeys("5425424242");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet5.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(3);
+        peyk_pages.calisanSil.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": Çalışan Şifre Yönetimine tıklarsanız Yeni Şifre Talebi oluşturabilir,Ana Sayfa Linki,Kayıt Bildirisi Gönderebilir Bloke Listesine ulaşabilirsiniz")

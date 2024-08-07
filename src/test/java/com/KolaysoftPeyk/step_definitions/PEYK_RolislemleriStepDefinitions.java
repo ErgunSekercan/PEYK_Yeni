@@ -9,6 +9,9 @@ import io.cucumber.java.tr.Eğerki;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class PEYK_RolislemleriStepDefinitions extends Driver{
 
     PEYK_Pages peyk_pages = new PEYK_Pages();
@@ -56,7 +59,7 @@ public class PEYK_RolislemleriStepDefinitions extends Driver{
         BrowserUtils.waitFor(3);
     }
     @Eğerki(": Rol Atamaya tıklarsanız Personel Listesine ulaşıp Personele Rol Ekleyip Organizasyonel ve Masraf Yeri Yetki Atamaları yapabilirsiniz")
-    public void rol_atamaya_tıklarsanız_personel_listesine_ulaşıp_personele_rol_ekleyip_organizasyonel_ve_masraf_yeri_yetki_atamaları_yapabilirsiniz() {
+    public void rol_atamaya_tıklarsanız_personel_listesine_ulaşıp_personele_rol_ekleyip_organizasyonel_ve_masraf_yeri_yetki_atamaları_yapabilirsiniz() throws AWTException {
         peyk_pages.rolAtama.click();
         BrowserUtils.waitFor(2);
         String personelListesi = peyk_pages.personelListesi.getText();
@@ -65,9 +68,31 @@ public class PEYK_RolislemleriStepDefinitions extends Driver{
         peyk_pages.personeleRolEkle.click();
         BrowserUtils.waitFor(1);
         peyk_pages.rolSec.sendKeys("Admin");
-        peyk_pages.rolSec.sendKeys(Keys.ENTER);
         BrowserUtils.waitFor(2);
-
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.ekle.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(1);
+        String adminRolu = peyk_pages.adminRolu.getText();
+        Assert.assertEquals(adminRolu,"Admin");
+        BrowserUtils.waitFor(1);
+        peyk_pages.sil.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(1);
+        String rolBulunamadi = peyk_pages.rolBulunamadi.getText();
+        Assert.assertEquals(rolBulunamadi,"Rol Bulunamadı");
+        BrowserUtils.waitFor(1);
+        peyk_pages.close.click();
+        BrowserUtils.waitFor(1);
 
         peyk_pages.kullanici.click();
         peyk_pages.cikis.click();

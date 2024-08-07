@@ -312,6 +312,15 @@ public class PEYK_Pages {
     @FindBy(xpath = "(//input[@aria-expanded='false'])[5]")
     public WebElement rolSec;
 
+    @FindBy(xpath = "//button[contains(text(),'Ekle')]")
+    public WebElement ekle;
+
+    @FindBy(xpath = "//td[contains(text(),'Admin')]")
+    public WebElement adminRolu;
+
+    @FindBy(xpath = "//td[contains(text(),'Rol Bulunamadı')]")
+    public WebElement rolBulunamadi;
+
 
     // Tanimlar
     @FindBy(xpath = "//a[contains(@data-toggle,'collapse') and contains(@href, '#kepTanim') and contains(p, 'Tanımlar')]")
@@ -320,14 +329,43 @@ public class PEYK_Pages {
     @FindBy(xpath = "//span[contains(text(), \"Departman Tanımı\")]")
     public WebElement departmanTanimi;
 
+    @FindBy(xpath = "//button[@label='Yeni Oluştur']")
+    public WebElement yeniOlustur;
+
     @FindBy(xpath = "//h4[contains(text(), \"Departman Listesi\")]")
     public WebElement departmanListesi;
+    @FindBy(xpath = "//select[@name='parentId']")
+    public WebElement departmanSeciniz;
+
+    @FindBy(xpath = "//option[@value='4667']")
+    public WebElement merkezDepartman;
+
+    @FindBy(xpath = "//select[@name='typeId']")
+    public WebElement turSeciniz;
+
+    @FindBy(xpath = "//option[@value='747']")
+    public WebElement turSube;
+
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement departmanAdi;
+
+    @FindBy(xpath = "//input[@name='integrationCode']")
+    public WebElement departmanKodu;
+
+    @FindBy(xpath = "(//i[@class=' fa fa-trash'] )[1]")
+    public WebElement departmanSil;
 
     @FindBy(xpath = "//span[contains(text(), \" Departman Tür Tanımı\")]")
     public WebElement departmanTurTanimi;
 
     @FindBy(xpath = "//h4[contains(text(), \"Departman Türü Listesi\")]")
-    public WebElement departmanTuru;
+    public WebElement departmanTuruListesi;
+
+    @FindBy(xpath = "//input[@name='type']")
+    public WebElement departmanTuruOlustur;
+
+    @FindBy(xpath = "(//i[@class=' fa fa-trash'])[5]")
+    public WebElement departmanTuruSil;
 
     @FindBy(xpath = "//p[contains(text(), \"Çalışan Tanımları\")]")
     public WebElement calisanTanimlari;
@@ -337,6 +375,30 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "//h4[contains(text(), \"Çalışan Listesi\")]")
     public WebElement calisanListesi;
+
+    @FindBy(xpath = "//input[@name='name']")
+    public WebElement calisanAdi;
+
+    @FindBy(xpath = "//input[@name='surname']")
+    public WebElement calisanSoyadi;
+
+    @FindBy(xpath = "//input[@name='tckn']")
+    public WebElement calisanTckn;
+
+    @FindBy(xpath = "(//input[@id='autoCompleteList'])[1]")
+    public WebElement departman;
+
+    @FindBy(xpath = "//input[@id='employeeNtfResultList']")
+    public WebElement bildirimTuru;
+
+    @FindBy(xpath = "//input[@name='telephone']")
+    public WebElement telefonNumarasi;
+
+    @FindBy(xpath = "//button[contains(text(),\"Kaydet\")]")
+    public WebElement kaydet5;
+
+    @FindBy(xpath = "(//i[@class=' fa fa-trash'])[2]")
+    public WebElement calisanSil;
 
     @FindBy(xpath = "//span[contains(text(), \" Çalışan Şifre Yönetimi\")]")
     public WebElement calisanSifreYon;
