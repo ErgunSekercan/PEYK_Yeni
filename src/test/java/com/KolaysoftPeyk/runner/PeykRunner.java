@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
   features = "src/test/resources/features",
   glue = "com/KolaysoftPeyk/step_definitions",
   dryRun = false,
-  tags = "@Tanimlar"
+  tags = "@Form"
 
 )
 public class PeykRunner {}

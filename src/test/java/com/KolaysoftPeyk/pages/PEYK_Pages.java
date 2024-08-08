@@ -406,6 +406,18 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"Çalışan Şifre Yönetimi\")]")
     public WebElement calSifYon;
 
+    @FindBy(xpath = "//a[contains(text(),\"Çalışan Bloke Listesi\")]")
+    public WebElement calisanBlokeListesi;
+
+    @FindBy(xpath = "//h4[contains(text(), \"Çalışan Bloke Listesi\")]")
+    public WebElement calBlokList;
+
+    @FindBy(xpath = "//a[contains(text(),\"IK Admin Hesabı Bloke Listesi\")]")
+    public WebElement IkAdminBlokeListesi;
+
+    @FindBy(xpath = "//h4[contains(text(), \"IK Admin Hesabı Bloke Listesi\")]")
+    public WebElement IkAdmlBlokList;
+
     @FindBy(xpath = "//span[contains(text(), \" Firma Bilgileri\")]")
     public WebElement firmaBilgileri;
 
@@ -418,11 +430,32 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"Çalışan Listesi\")]")
     public WebElement calisanBilgilendirmeList;
 
+    @FindBy(xpath = "(//input[@type='checkbox'])[3]")
+    public WebElement calisanSec;
+
+    @FindBy(xpath = "(//div[@class='rdt datepicker']//input)[7]")
+    public WebElement baslangicTarihi;
+
+    @FindBy(xpath = "(//div[@class='rdt datepicker']//input)[8]")
+    public WebElement bitisTarihi;
+
+    @FindBy(xpath = "(//button[contains(text(), \"Arama Yap\")])[2]")
+    public WebElement aramaYap;
+
+    @FindBy(xpath = "//td[@data-label='Telefon Numarası']")
+    public WebElement bilgilendirmeTel;
+
     @FindBy(xpath = "//span[contains(text(), \" Onay Akışı\")]")
     public WebElement onayAkisi;
 
     @FindBy(xpath = "//button[contains(text(), \"Yeni Oluştur\")]")
     public WebElement yeniOnayAkisi;
+
+    @FindBy(xpath = "(//button[@class='simpleButton trash'])[1]")
+    public WebElement akisSil;
+
+    @FindBy(xpath = "(//input[@aria-expanded='false'])[2]")
+    public WebElement belgeTuruSeciniz;
 
     @FindBy(xpath = "//span[contains(text(), \"E-imza Doğrulama\")]")
     public WebElement eImzaDog;
@@ -439,11 +472,44 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(),'Form Şablonları')]")
     public WebElement formSablon;
 
-    @FindBy(xpath = "//span[contains(text(),' Form Türü Tanımı')]")
+    @FindBy(xpath = "(//input[@id='autoCompleteList'])[1]")
+    public WebElement formTuru;
+
+    @FindBy(xpath = "//input[@name='formName']")
+    public WebElement formAdi;
+
+    @FindBy(xpath = "//button[@id='employeeParameters']")
+    public WebElement calisanParametreleri;
+
+    @FindBy(xpath = "(//button[@id='drag1'])[1]")
+    public WebElement calisanAd;
+
+    @FindBy(xpath = "//button[@label='Formu Kaydet']")
+    public WebElement formuKaydet;
+
+    @FindBy(xpath = "//button[contains(text(),'Kapat')]")
+    public WebElement kapat;
+
+    @FindBy(xpath = "//div[contains(text(),'Kolaysoft')]")
+    public WebElement formAdi_Kolaysoft;
+
+    @FindBy(xpath = "//button[@label='Form Türü Tanımı']")
     public WebElement formTuruTanimi;
 
     @FindBy(xpath = "//h4[contains(text(),'Form Türü Listesi')]")
     public WebElement formTuruListesi;
+
+    @FindBy(xpath = "//input[@name='category']")
+    public WebElement formTuru2;
+
+    @FindBy(xpath = "//div[contains(text(),\"ALACAK\")]")
+    public WebElement alacakTuru;
+
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement formTuru3;
+
+    @FindBy(xpath = "//i[@class=' fa fa-trash']")
+    public WebElement sil2;
 
     @FindBy(xpath = "//span[contains(text(),' Firma Parametreleri')]")
     public WebElement firmaParametreleri;
@@ -457,9 +523,23 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(),'Talep Formları')]")
     public WebElement talepFormlari;
 
+    @FindBy(xpath = "//p[contains(text(),'Başlık')]")
+    public WebElement baslik;
+
+    @FindBy(xpath = "//input[@id='headingElement']")
+    public WebElement basliginIci;
+
+    @FindBy(xpath = "//input[@class='form-control']")
+    public WebElement talepFormAdi;
+
+    @FindBy(xpath = "//button[contains(text(), \"Arama Yap\")]")
+    public WebElement aramaYap2;
+
+
+
 
     // UcretBordrosu
-    @FindBy(xpath = "//p[contains(text(), \"Ücret Bordrosu\")]")
+    @FindBy(xpath = "//input[@id='headingElement']")
     public WebElement ucretBordrosu;
 
     @FindBy(xpath = "//span[contains(text(),\" Ücret Bordrosu Yükle \")]")

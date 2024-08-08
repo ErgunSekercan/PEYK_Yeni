@@ -5,6 +5,7 @@ import com.KolaysoftPeyk.utility.BrowserUtils;
 import com.KolaysoftPeyk.utility.ConfigurationReader;
 import com.KolaysoftPeyk.utility.Driver;
 import io.cucumber.java.tr.Eğerki;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 
 import java.awt.*;
@@ -20,7 +21,7 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         peyk_pages.TcNo.sendKeys(ConfigurationReader.getProperty("TcNo"));
         peyk_pages.sifre.sendKeys(ConfigurationReader.getProperty("sifre"));
         peyk_pages.giris.click();
-        BrowserUtils.waitFor(10);
+        BrowserUtils.waitFor(7);
 
         peyk_pages.PEYK.click();
         BrowserUtils.waitFor(2);
@@ -135,9 +136,20 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         String calisanSifreYonetimi = peyk_pages.calSifYon.getText();
         Assert.assertEquals(calisanSifreYonetimi,"Çalışan Şifre Yönetimi");
         BrowserUtils.waitFor(2);
+        peyk_pages.calisanBlokeListesi.click();
+        BrowserUtils.waitFor(2);
+        String calisanBlokeListesi = peyk_pages.calBlokList.getText();
+        Assert.assertEquals(calisanBlokeListesi,"Çalışan Bloke Listesi");
+        BrowserUtils.waitFor(2);
+        peyk_pages.IkAdminBlokeListesi.click();
+        BrowserUtils.waitFor(2);
+        String IkAdminBlokeListesi = peyk_pages.IkAdmlBlokList.getText();
+        Assert.assertEquals(IkAdminBlokeListesi,"IK Admin Hesabı Bloke Listesi");
+        BrowserUtils.waitFor(2);
+
     }
-    @Eğerki(": Firma Bilgilerine tıklarsanız Logo,Antentli Kağıt Yükleyebilir,Şifre Politikası Belirleyip diğer işlemleri yapabilirsiniz")
-    public void firma_bilgilerine_tıklarsanız_logo_antentli_kağıt_yükleyebilir_şifre_politikası_belirleyip_diğer_işlemleri_yapabilirsiniz() {
+    @Eğerki(": Firma Bilgilerine tıklarsanız Logo Yükle,Antentli Kağıt Yükle,Şifre Politikası Belirle,İndirilebilir Dosya Yükle,Bildirim Tasarım Ekranı ve Firma Parametrelerine ulaşabilirsiniz")
+    public void firma_bilgilerine_tıklarsanız_logo_yükle_antentli_kağıt_yükle_şifre_politikası_belirle_indirilebilir_dosya_yükle_bildirim_tasarım_ekranı_ve_firma_parametrelerine_ulaşabilirsiniz() {
         peyk_pages.firmaBilgileri.click();
         BrowserUtils.waitFor(2);
         String logoYukle = peyk_pages.logoYukle.getText();
@@ -151,13 +163,39 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         String calisanBilgilendirmeList = peyk_pages.calisanBilgilendirmeList.getText();
         Assert.assertEquals(calisanBilgilendirmeList,"Çalışan Listesi");
         BrowserUtils.waitFor(2);
+        peyk_pages.calisanSec.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.baslangicTarihi.sendKeys("01-08-2024");
+        BrowserUtils.waitFor(1);
+        peyk_pages.bitisTarihi.sendKeys("07-08-2024");
+        BrowserUtils.waitFor(2);
+        peyk_pages.aramaYap.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.bilgilendirmeTel.isDisplayed();
+        BrowserUtils.waitFor(2);
+
     }
     @Eğerki(": Onay Akışına tıklarsanız Onay Akış Politikanızı oluşturabilirsiniz")
-    public void onay_akışına_tıklarsanız_onay_akış_politikanızı_oluşturabilirsiniz() {
+    public void onay_akışına_tıklarsanız_onay_akış_politikanızı_oluşturabilirsiniz() throws AWTException {
         peyk_pages.onayAkisi.click();
         BrowserUtils.waitFor(2);
         String yeniOnayAkisi = peyk_pages.yeniOnayAkisi.getText();
         Assert.assertEquals(yeniOnayAkisi,"Yeni Oluştur");
+        BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.belgeTuruSeciniz.sendKeys("AKIŞ");
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet5.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(3);
+        peyk_pages.akisSil.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": E-Imza Doğrulamaya tıklarsanız Akıllı kart markasını seçebilirsiniz")
@@ -169,8 +207,8 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
     }
 
-    @Eğerki(": Form Tanımlarına tıklarsanız Form Şablonları,Form Türü Tanımı,Firma Parametreleri,Talep Form Editörüne ulaşabilirsiniz")
-    public void form_tanımlarına_tıklarsanız_form_şablonları_form_türü_tanımı_firma_parametreleri_talep_form_editörüne_ulaşabilirsiniz() {
+    @Eğerki(": Form Tanımlarına tıklarsanız Form Şablonları ve Talep Form Editörüne ulaşabilirsiniz")
+    public void form_tanımlarına_tıklarsanız_form_şablonları_ve_talep_form_editörüne_ulaşabilirsiniz() {
         peyk_pages.formTanimlari.click();
         BrowserUtils.waitFor(2);
         String formSablonlari = peyk_pages.formSablonlari.getText();
@@ -178,20 +216,65 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": Form Şablonlarına tıklarsanız Öncelikli Formları Sıralayıp Yeni Form Şablonu oluşturabilirsiniz")
-    public void form_şablonlarına_tıklarsanız_öncelikli_formları_sıralayıp_yeni_form_şablonu_oluşturabilirsiniz() {
+    public void form_şablonlarına_tıklarsanız_öncelikli_formları_sıralayıp_yeni_form_şablonu_oluşturabilirsiniz() throws AWTException {
         peyk_pages.formSablonlari.click();
         BrowserUtils.waitFor(2);
         String formSablon = peyk_pages.formSablon.getText();
         Assert.assertEquals(formSablon,"Form Şablonları");
         BrowserUtils.waitFor(2);
-    }
-    @Eğerki(": Form Türü Tanımına tıklarsanız Yeni Form Türü oluşturabilirsiniz")
-    public void form_türü_tanımına_tıklarsanız_yeni_form_türü_oluşturabilirsiniz() {
-       /* peyk_pages.formTuruTanimi.click();
+        peyk_pages.yeniOlustur.click();
         BrowserUtils.waitFor(2);
-        String eImzaDogrulama = peyk_pages.formTuruListesi.getText();
-        Assert.assertEquals(eImzaDogrulama,"Form Türü Listesi");
-        BrowserUtils.waitFor(4);*/
+        peyk_pages.formTuru.sendKeys("BİLDİRİM");
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.formAdi.sendKeys("Kolaysoft");
+        BrowserUtils.waitFor(2);
+        //peyk_pages.ePostaIcerigi.sendKeys("Peyk");
+        BrowserUtils.waitFor(1);
+        peyk_pages.calisanParametreleri.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.calisanAd.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.formuKaydet.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(1);
+        peyk_pages.formAdi_Kolaysoft.isDisplayed();
+        System.out.println(String.valueOf(peyk_pages.formAdi_Kolaysoft));
+        BrowserUtils.waitFor(2);
+        peyk_pages.sil.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(2);
+    }
+    @Eğerki(": Form Şablonlarında önce Yeni Oluştur sonra da Form Türü Tanımına tıklarsanız Yeni Form Türü oluşturabilirsiniz")
+    public void form_şablonlarında_önce_yeni_oluştur_sonra_da_form_türü_tanımına_tıklarsanız_yeni_form_türü_oluşturabilirsiniz() throws AWTException {
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.formTuruTanimi.click();
+        BrowserUtils.waitFor(2);
+        String formTuruListesi = peyk_pages.formTuruListesi.getText();
+        Assert.assertEquals(formTuruListesi,"Form Türü Listesi");
+        BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.formTuru2.sendKeys("ALACAK");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet4.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.formTuru3.sendKeys("ALACAK");
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        BrowserUtils.waitFor(2);
+        peyk_pages.alacakTuru.isDisplayed();
+        BrowserUtils.waitFor(2);
+        peyk_pages.sil2.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(2);
     }
     @Eğerki(": Firma Parametrelerine tıklarsanız Yeni Firma Parametresi oluşturabilirsiniz")
     public void firma_parametrelerine_tıklarsanız_yeni_firma_parametresi_oluşturabilirsiniz() {
@@ -207,6 +290,28 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         String talepFormlari = peyk_pages.talepFormlari.getText();
         Assert.assertEquals(talepFormlari,"Talep Formları");
+        BrowserUtils.waitFor(2);
+        peyk_pages.yeniOlustur.click();
+        BrowserUtils.waitFor(3);
+        peyk_pages.baslik.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.basliginIci.sendKeys("Otomasyon Test Formu");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kaydet5.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.talepFormAdi.sendKeys("Otomasyon Test Formu");
+        BrowserUtils.waitFor(2);
+        peyk_pages.aramaYap2.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.sil2.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.evet.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.kayitBulunamadi.isDisplayed();
         BrowserUtils.waitFor(2);
 
         peyk_pages.kullanici.click();

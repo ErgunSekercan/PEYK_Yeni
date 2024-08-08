@@ -48,21 +48,26 @@ public class PEYK_FormStepDefinitions extends Driver{
         BrowserUtils.waitFor(1);
         peyk_pages.onayla.click();
         BrowserUtils.waitFor(3);
-        peyk_pages.imzalaGonder.click();
-        BrowserUtils.waitFor(1);
-        peyk_pages.evet.click();
-        BrowserUtils.waitFor(5);
-        try {
-            String pin = peyk_pages.pin.getText();
-            BrowserUtils.waitFor(2);
-
-            if (pin.contains("P")) {
-                peyk_pages.eImzaPassword.click();
-                peyk_pages.eImzaPassword.sendKeys("3944");
+        if(peyk_pages.pin.isDisplayed()) {
+            try {
+                String pin = peyk_pages.pin.getText();
                 BrowserUtils.waitFor(2);
+
+                if (pin.contains("P")) {
+                    peyk_pages.eImzaPassword.click();
+                    peyk_pages.eImzaPassword.sendKeys("3944");
+                    BrowserUtils.waitFor(2);
+                    peyk_pages.imzalaGonder.click();
+                    peyk_pages.evet.click();
+                }
+            } catch (Exception e) {
+                System.out.println("E-imza bulunmamaktadır!");
             }
-        }catch (Exception e){
-            System.out.println("E-imza bulunmamaktadır!");
+        }else {
+            peyk_pages.imzalaGonder.click();
+            BrowserUtils.waitFor(1);
+            peyk_pages.evet.click();
+            BrowserUtils.waitFor(5);
         }
         /*peyk_pages.imzala.click();
         BrowserUtils.waitFor(2);
@@ -107,34 +112,35 @@ public class PEYK_FormStepDefinitions extends Driver{
         peyk_pages.tamam.click();
         BrowserUtils.waitFor(5);
         peyk_pages.ucKisininMetni.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
         peyk_pages.aliVeliPdf.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
         peyk_pages.topluFormGonder.click();
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitFor(2);
         peyk_pages.sablonsuz1.click();
         peyk_pages.sablonsuz2.click();
-        peyk_pages.imzalaGonder.click();
-        BrowserUtils.waitFor(1);
-        peyk_pages.evet.click();
-        BrowserUtils.waitFor(5);
-        try {
-            String pin = peyk_pages.pin.getText();
-            BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(2);
 
-            if (pin.contains("P")) {
-                peyk_pages.eImzaPassword.click();
-                peyk_pages.eImzaPassword.sendKeys("3944");
+        if(peyk_pages.pin.isDisplayed()) {
+            try {
+                String pin = peyk_pages.pin.getText();
                 BrowserUtils.waitFor(2);
-                peyk_pages.imzala.click();
-                BrowserUtils.waitFor(2);
-                peyk_pages.evet.click();
-                BrowserUtils.waitFor(5);
-                peyk_pages.refresh.click();
-                BrowserUtils.waitFor(1);
+
+                if (pin.contains("P")) {
+                    peyk_pages.eImzaPassword.click();
+                    peyk_pages.eImzaPassword.sendKeys("3944");
+                    BrowserUtils.waitFor(2);
+                    peyk_pages.imzalaGonder.click();
+                    peyk_pages.evet.click();
+                }
+            } catch (Exception e) {
+                System.out.println("E-imza bulunmamaktadır!");
             }
-        }catch (Exception e){
-            System.out.println("E-imza bulunmamaktadır!");
+        }else {
+            peyk_pages.imzalaGonder.click();
+            BrowserUtils.waitFor(1);
+            peyk_pages.evet.click();
+            BrowserUtils.waitFor(5);
         }
 
         Assert.assertEquals(peyk_pages.kayitBulunamadi.getText(),"Kayıt bulunamadı.");
