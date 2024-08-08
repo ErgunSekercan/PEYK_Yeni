@@ -48,31 +48,26 @@ public class PEYK_FormStepDefinitions extends Driver{
         BrowserUtils.waitFor(1);
         peyk_pages.onayla.click();
         BrowserUtils.waitFor(3);
-        if(peyk_pages.pin.isDisplayed()) {
-            try {
-                String pin = peyk_pages.pin.getText();
-                BrowserUtils.waitFor(2);
 
-                if (pin.contains("P")) {
-                    peyk_pages.eImzaPassword.click();
-                    peyk_pages.eImzaPassword.sendKeys("3944");
-                    BrowserUtils.waitFor(2);
-                    peyk_pages.imzalaGonder.click();
-                    peyk_pages.evet.click();
-                }
-            } catch (Exception e) {
-                System.out.println("E-imza bulunmamaktadır!");
+        try {
+            String pin = peyk_pages.pin.getText();
+            BrowserUtils.waitFor(2);
+
+            if (pin.contains("P")) {
+                peyk_pages.eImzaPassword.click();
+                peyk_pages.eImzaPassword.sendKeys("3944");
+                BrowserUtils.waitFor(2);
+                peyk_pages.imzalaGonder.click();
+                peyk_pages.evet.click();
             }
-        }else {
+        } catch (Exception e) {
+            System.out.println("E-imza bulunmamaktadır!");
             peyk_pages.imzalaGonder.click();
             BrowserUtils.waitFor(1);
             peyk_pages.evet.click();
             BrowserUtils.waitFor(5);
         }
-        /*peyk_pages.imzala.click();
-        BrowserUtils.waitFor(2);
-        peyk_pages.evet.click();
-        BrowserUtils.waitFor(5);*/
+
         Assert.assertEquals(peyk_pages.pdfGonderiliyor.getText(),"PDF imzalandı ve gönderiliyor");
         BrowserUtils.waitFor(2);
 
@@ -121,7 +116,6 @@ public class PEYK_FormStepDefinitions extends Driver{
         peyk_pages.sablonsuz2.click();
         BrowserUtils.waitFor(2);
 
-        if(peyk_pages.pin.isDisplayed()) {
             try {
                 String pin = peyk_pages.pin.getText();
                 BrowserUtils.waitFor(2);
@@ -135,13 +129,12 @@ public class PEYK_FormStepDefinitions extends Driver{
                 }
             } catch (Exception e) {
                 System.out.println("E-imza bulunmamaktadır!");
+                peyk_pages.imzalaGonder.click();
+                BrowserUtils.waitFor(1);
+                peyk_pages.evet.click();
+                BrowserUtils.waitFor(5);
             }
-        }else {
-            peyk_pages.imzalaGonder.click();
-            BrowserUtils.waitFor(1);
-            peyk_pages.evet.click();
-            BrowserUtils.waitFor(5);
-        }
+
 
         Assert.assertEquals(peyk_pages.kayitBulunamadi.getText(),"Kayıt bulunamadı.");
         BrowserUtils.waitFor(2);
@@ -159,7 +152,6 @@ public class PEYK_FormStepDefinitions extends Driver{
         peyk_pages.cikis.click();
         closeDriver();
     }
-
 
     }
 
