@@ -39,8 +39,6 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "//h4[@class='card-title']")
     public WebElement ucretBordrosuYukle;
-   // @FindBy(xpath = "//span[contains(text(), \" Ücret Bordrosu Yükle \")]")
-  //  public WebElement ucretBordrosuYukle;
 
     @FindBy(xpath = "(//p[contains(text(), \"Form\")])[2]")
     public WebElement Form;
@@ -104,19 +102,11 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"Ücret Bordroları Arşiv\")]")
     public WebElement ucretBordArs;
 
-    /*@FindBy(xpath = "//span[contains(text(), \"Formlar Arşiv\")]")
-    public WebElement formlarArsiv;*/
-
     @FindBy(xpath = "//h4[contains(text(), \"Formlar Arşiv\")]")
     public WebElement formArs;
 
 
     // Form
-    /*@FindBy(xpath = "//a[@href='#kepForm' and contains(p, \"Form\")]")
-    public WebElement form;
-
-    @FindBy(xpath = "//span[contains(text(), \" Form Gönder\")]")
-    public WebElement formGonder;*/
 
     @FindBy(xpath = "//h4[contains(text(), \"Form Gönder\")]")
     public WebElement formGon;
@@ -135,6 +125,9 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "(//input[@type='checkbox'])[14]")
     public WebElement aliVeli;
+
+    @FindBy(xpath = "(//input[@type='checkbox'])[15]")
+    public WebElement aliVeli2;
 
     @FindBy(xpath = "//button[@class='btn-sm btn-icon TekBtn kaydet']")
     //button[contains(text(),'Kaydet')]
@@ -418,11 +411,68 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"IK Admin Hesabı Bloke Listesi\")]")
     public WebElement IkAdmlBlokList;
 
+    @FindBy(xpath = "(//td/input[@type='checkbox'])[1]")
+    public WebElement ilkCalisan;
+
+    @FindBy(xpath = "//button[@label=\"Excel'e Aktar\"]")
+    public WebElement exceleAktar;
+
+    @FindBy(xpath = "//button[@label=\"Şifre Tekrar Gönder\"]")
+    public WebElement sifreTekrarGonder;
+
+    @FindBy(xpath = "//button[@label=\"Anasayfa Linki Gönder\"]")
+    public WebElement anaSayfaLinkiGonder;
+
+    @FindBy(xpath = "//button[@label=\"Kayıt Bildirisi Gönder\"]")
+    public WebElement kayıtBildirisiGonder;
+
+    @FindBy(xpath = "//button[contains(text(), \"Hayır\")]")
+    public WebElement hayir;
+
+    @FindBy(xpath = "//button[@label=\"Sonuç Yenile\"]")
+    public WebElement sonucYenile;
+
     @FindBy(xpath = "//span[contains(text(), \" Firma Bilgileri\")]")
     public WebElement firmaBilgileri;
 
     @FindBy(xpath = "//button[@label='Logo Yükle']")
     public WebElement logoYukle;
+
+    @FindBy(xpath = "//input[@class=\"fileInput\"]")
+    public WebElement chooseFile;
+
+    @FindBy(xpath = "//button[@label=\"Antetli Kağıt Yükle\"]")
+    public WebElement antentliKagYuk;
+
+    @FindBy(xpath = "//spam[contains(text(),\"!\")]")
+    public WebElement boyut;
+
+    @FindBy(xpath = "//button[@label=\"Şifre Politikası Belirle\"]")
+    public WebElement sifrePolitikasiBelirle;
+
+    @FindBy(xpath = "//label[contains(text(), \"Şifre Politikası Ekranı\")]")
+    public WebElement sifrePolitikasiEkrani;
+
+    @FindBy(xpath = "//a[contains(text(),\"Yeni Şifre Talebi\")]")
+    public WebElement yeniSifreTalebi;
+
+    @FindBy(xpath = "//button[@label=\"İndirilebilir Dosya Yükle\"]")
+    public WebElement indirilebilirDosyaYükle;
+
+    @FindBy(xpath = "//div[@class=\"dropzoneInnerArea\"]")
+    public WebElement indirilebilirDosyaniziYükleyiniz;
+
+    @FindBy(xpath = "//button[@label=\"Bildirim Tasarım Ekranı\"]")
+    public WebElement bildirimTasarimEkrani;
+
+    @FindBy(xpath = "//label[contains(text(), \"Eşleştirilen Gönderim :\")]")
+    public WebElement eslestirilenGonderim;
+
+    @FindBy(xpath = "//button[@label=\"Firma Parametreleri\"]")
+    public WebElement firmaParametreleri;
+
+    @FindBy(xpath = "//div[contains(text(), \"Parametre Adı\")]")
+    public WebElement parametreAdi;
 
     @FindBy(xpath = "//span[contains(text(), \"Bilgilendirme Durumu\")]")
     public WebElement bilgilendirmeDurumu;
@@ -512,7 +562,7 @@ public class PEYK_Pages {
     public WebElement sil2;
 
     @FindBy(xpath = "//span[contains(text(),' Firma Parametreleri')]")
-    public WebElement firmaParametreleri;
+    public WebElement firmaParametreleri2;
 
     @FindBy(xpath = "//h4[contains(text(),'Firma Parametreleri')]")
     public WebElement firmaParam;
@@ -539,7 +589,7 @@ public class PEYK_Pages {
 
 
     // UcretBordrosu
-    @FindBy(xpath = "//input[@id='headingElement']")
+    @FindBy(xpath = "//p[contains(text(),\"Ücret Bordrosu\")]")
     public WebElement ucretBordrosu;
 
     @FindBy(xpath = "//span[contains(text(),\" Ücret Bordrosu Yükle \")]")
@@ -598,6 +648,21 @@ public class PEYK_Pages {
     @FindBy(xpath = "//h4[contains(text(), \"Vekil Yetkilendirme\")]")
     public WebElement vekilYet;
 
+    @FindBy(xpath = "//button[contains(text(), \"Seç\")]")
+    public WebElement yetkilendirilecekPersonelSec;
 
+    @FindBy(xpath = "//input[@aria-expanded='false']")
+    public WebElement kisiSeciniz;
 
+    @FindBy(xpath = "//input[@id='custom-role-checkbox-0']")
+    public WebElement rolYetkisi;
+
+    @FindBy(xpath = "//input[@id='custom-organization-checkbox-0']")
+    public WebElement organizasyonYetkisi;
+
+    @FindBy(xpath = "//input[@name='finish_date']")
+    public WebElement yetkiGeriTar;
+
+    @FindBy(xpath = "//td[contains(text(),\"Kalfa Kalfa [ Tckn: 13207012882 ]\")]")
+    public WebElement yetkiyiAlan;
 }

@@ -27,7 +27,6 @@ public class PEYK_UcretBordrosuStepDefinitions extends Driver{
 
         peyk_pages.ucretBordrosu.click();
         BrowserUtils.waitFor(3);
-        //String ucretBordrosu = peyk_pages.ucretBordrosuYukle.getText();
         Assert.assertEquals(peyk_pages.ucretBordrosuYukle2.getText(),"Ücret Bordrosu Yükle");
         BrowserUtils.waitFor(2);
 
@@ -49,8 +48,6 @@ public class PEYK_UcretBordrosuStepDefinitions extends Driver{
         peyk_pages.evet.click();
         BrowserUtils.waitFor(1);
 
-        //peyk_pages.bordroPdfYukleyiniz.click();
-        //BrowserUtils.waitFor(2);
         peyk_pages.bordroPdfYukleyiniz.sendKeys("C:\\Users\\Kolaysoft\\IdeaProjects\\PEYK_Yeni\\Ali Boz-87197540786.pdf");
         BrowserUtils.waitFor(2);
     }

@@ -17,5 +17,4 @@
     Eğer ki : Form Tanımlarına tıklarsanız Form Şablonları ve Talep Form Editörüne ulaşabilirsiniz
     Eğer ki : Form Şablonlarına tıklarsanız Öncelikli Formları Sıralayıp Yeni Form Şablonu oluşturabilirsiniz
     Eğer ki : Form Şablonlarında önce Yeni Oluştur sonra da Form Türü Tanımına tıklarsanız Yeni Form Türü oluşturabilirsiniz
-    Eğer ki : Firma Parametrelerine tıklarsanız Yeni Firma Parametresi oluşturabilirsiniz
     Eğer ki : Talep Form Editörüne tıklarsanız Yeni Talep Formu oluşturabilirsiniz

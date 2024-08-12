@@ -146,7 +146,28 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         String IkAdminBlokeListesi = peyk_pages.IkAdmlBlokList.getText();
         Assert.assertEquals(IkAdminBlokeListesi,"IK Admin Hesabı Bloke Listesi");
         BrowserUtils.waitFor(2);
-
+        peyk_pages.yeniSifreTalebi.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.ilkCalisan.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.exceleAktar.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.sifreTekrarGonder.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.anaSayfaLinkiGonder.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.kayıtBildirisiGonder.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.tamam.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.hayir.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.sonucYenile.click();
+        BrowserUtils.waitFor(2);
     }
     @Eğerki(": Firma Bilgilerine tıklarsanız Logo Yükle,Antentli Kağıt Yükle,Şifre Politikası Belirle,İndirilebilir Dosya Yükle,Bildirim Tasarım Ekranı ve Firma Parametrelerine ulaşabilirsiniz")
     public void firma_bilgilerine_tıklarsanız_logo_yükle_antentli_kağıt_yükle_şifre_politikası_belirle_indirilebilir_dosya_yükle_bildirim_tasarım_ekranı_ve_firma_parametrelerine_ulaşabilirsiniz() {
@@ -154,6 +175,43 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         String logoYukle = peyk_pages.logoYukle.getText();
         Assert.assertEquals(logoYukle,"Logo Yükle");
+        BrowserUtils.waitFor(2);
+        peyk_pages.logoYukle.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.chooseFile.isDisplayed();
+        BrowserUtils.waitFor(2);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.antentliKagYuk.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.chooseFile.isDisplayed();
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.sifrePolitikasiBelirle.click();
+        BrowserUtils.waitFor(2);
+        String sifrePolitikasiEkrani = peyk_pages.sifrePolitikasiEkrani.getText();
+        Assert.assertEquals(sifrePolitikasiEkrani,"Şifre Politikası Ekranı");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.indirilebilirDosyaYükle.click();
+        BrowserUtils.waitFor(2);
+        String indirilebilirDosyaniziYükleyiniz = peyk_pages.indirilebilirDosyaniziYükleyiniz.getText();
+        Assert.assertEquals(indirilebilirDosyaniziYükleyiniz,"İndirilebilir dosyanızı yükleyiniz.");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.bildirimTasarimEkrani.click();
+        BrowserUtils.waitFor(2);
+        String eslestirilenGonderim = peyk_pages.eslestirilenGonderim.getText();
+        Assert.assertEquals(eslestirilenGonderim,"Eşleştirilen Gönderim :");
+        BrowserUtils.waitFor(2);
+        peyk_pages.kapat.click();
+        BrowserUtils.waitFor(2);
+        peyk_pages.firmaParametreleri.click();
+        BrowserUtils.waitFor(2);
+        String parametreAdi = peyk_pages.parametreAdi.getText();
+        Assert.assertEquals(parametreAdi,"Parametre Adı");
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": Bilgilendirme Durumuna tıklarsanız Çalışan Bilgilendirme Durumu Sorgulama ekranına ulaşabilirsiniz")
@@ -231,8 +289,6 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         peyk_pages.formAdi.sendKeys("Kolaysoft");
         BrowserUtils.waitFor(2);
-        //peyk_pages.ePostaIcerigi.sendKeys("Peyk");
-        BrowserUtils.waitFor(1);
         peyk_pages.calisanParametreleri.click();
         BrowserUtils.waitFor(1);
         peyk_pages.calisanAd.click();
@@ -242,7 +298,6 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         peyk_pages.kapat.click();
         BrowserUtils.waitFor(1);
         peyk_pages.formAdi_Kolaysoft.isDisplayed();
-        System.out.println(String.valueOf(peyk_pages.formAdi_Kolaysoft));
         BrowserUtils.waitFor(2);
         peyk_pages.sil.click();
         BrowserUtils.waitFor(2);
@@ -275,14 +330,6 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         peyk_pages.evet.click();
         BrowserUtils.waitFor(2);
-    }
-    @Eğerki(": Firma Parametrelerine tıklarsanız Yeni Firma Parametresi oluşturabilirsiniz")
-    public void firma_parametrelerine_tıklarsanız_yeni_firma_parametresi_oluşturabilirsiniz() {
-      /*  peyk_pages.firmaParametreleri.click();
-        BrowserUtils.waitFor(2);
-        String firmaParam = peyk_pages.firmaParam.getText();
-        Assert.assertEquals(firmaParam,"Firma Parametreleri");
-        BrowserUtils.waitFor(2);*/
     }
     @Eğerki(": Talep Form Editörüne tıklarsanız Yeni Talep Formu oluşturabilirsiniz")
     public void talep_form_editörüne_tıklarsanız_yeni_talep_formu_oluşturabilirsiniz() {
