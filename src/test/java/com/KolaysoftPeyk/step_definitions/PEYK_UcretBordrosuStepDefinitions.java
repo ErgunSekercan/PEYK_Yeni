@@ -48,7 +48,7 @@ public class PEYK_UcretBordrosuStepDefinitions extends Driver{
         peyk_pages.evet.click();
         BrowserUtils.waitFor(1);
 
-        peyk_pages.bordroPdfYukleyiniz.sendKeys("C:\\Users\\Kolaysoft\\IdeaProjects\\PEYK_Yeni\\Ali Boz-87197540786.pdf");
+        peyk_pages.bordroPdfYukleyiniz.sendKeys("C:\\Users\\Kolaysoft\\IdeaProjects\\PEYK_Yeni\\Ali Veli-66362170898.pdf");
         BrowserUtils.waitFor(2);
     }
     @Eğerki(": Dökümanları Yükleye tıklayıp, oluşan pdf'i seçip,")

@@ -665,4 +665,30 @@ public class PEYK_Pages {
 
     @FindBy(xpath = "//td[contains(text(),\"Kalfa Kalfa [ Tckn: 13207012882 ]\")]")
     public WebElement yetkiyiAlan;
+
+    //Veli_Ali_Calisan
+
+    @FindBy(xpath = "//p[contains(text(), \"Talep Formları\")]")
+    public WebElement talepFormlariCalisan;
+
+    @FindBy(xpath = "//button[contains(text(), \"Yeni Talep\")]")
+    public WebElement yeniTalep;
+
+    @FindBy(xpath = "//input[@aria-expanded=\"false\"]")
+    public WebElement talepFormu;
+
+    @FindBy(xpath = "//span[contains(text(), \"Kabul Ediyorum\")]")
+    public WebElement kabulEdiyorum;
+
+    @FindBy(xpath = "//button[contains(text(), \"Kaydet ve Gönder\")]")
+    public WebElement kaydetVeGonder;
+
+    @FindBy(xpath = "(//input[@type=\"checkbox\"])[2]")
+    public WebElement secOpsiyonu;
+
+    @FindBy(xpath = "//button[contains(text(), \"Sayfadakileri Seç\")]")
+    public WebElement sayfadakileriSec;
+
+
+
 }
