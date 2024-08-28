@@ -39,6 +39,7 @@ public class OnayBekleyenlerStepDefinitions extends Driver{
         }
 
         peyk_pages.kullanici.click();
+        BrowserUtils.waitFor(2);
         peyk_pages.cikis.click();
         closeDriver();
 

@@ -31,7 +31,7 @@ public class PeykGirisStepDefinitions extends Driver{
     @Ozaman(": PeykKolaySoft portalına girmiş olursunuz")
     public void peyk_kolay_soft_portalına_girmiş_olursunuz() {
         String anaSayfa = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(anaSayfa,"https://peyktest2.kolaysoft.com.tr/accounting/login");
+        Assert.assertEquals(anaSayfa,"https://peyktest.kolaysoft.com.tr/accounting/login");
         BrowserUtils.waitFor(15);
         peykGirisPage.kullanici.click();
         peykGirisPage.cikis.click();

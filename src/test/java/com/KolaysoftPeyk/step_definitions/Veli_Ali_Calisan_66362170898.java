@@ -64,7 +64,7 @@ public class Veli_Ali_Calisan_66362170898 extends Driver{
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
         BrowserUtils.waitFor(2);
-        peyk_pages.kabulEdiyorum.click();
+        peyk_pages.sayiAlani.sendKeys("1");
         BrowserUtils.waitFor(2);
         peyk_pages.kaydetVeGonder.click();
         BrowserUtils.waitFor(2);

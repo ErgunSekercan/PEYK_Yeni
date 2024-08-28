@@ -21,7 +21,7 @@ public class AnaSayfaStepDefinitions extends Driver{
 
         peyk_pages.anaSayfa.click();
         String anaSayfa = Driver.getDriver().getCurrentUrl();
-        Assert.assertEquals(anaSayfa,"https://peyktest2.kolaysoft.com.tr/accounting/peyk/hr-dashboard");
+        Assert.assertEquals(anaSayfa,"https://peyktest.kolaysoft.com.tr/accounting/peyk/hr-dashboard");
         BrowserUtils.waitFor(3);
     }
     @Eğerki(": Bordro Göndere tıklarsanız Ücret Bordrosu Yükle ekranına geçersiniz")

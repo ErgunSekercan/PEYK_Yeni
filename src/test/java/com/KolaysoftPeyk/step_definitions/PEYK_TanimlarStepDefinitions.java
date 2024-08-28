@@ -140,7 +140,7 @@ public class PEYK_TanimlarStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         String calisanBlokeListesi = peyk_pages.calBlokList.getText();
         Assert.assertEquals(calisanBlokeListesi,"Çalışan Bloke Listesi");
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
         peyk_pages.IkAdminBlokeListesi.click();
         BrowserUtils.waitFor(2);
         String IkAdminBlokeListesi = peyk_pages.IkAdmlBlokList.getText();

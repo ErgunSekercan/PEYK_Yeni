@@ -123,10 +123,10 @@ public class PEYK_Pages {
     @FindBy(xpath = "//label[contains(text(),'Lütfen çalışan seçimi yapınız.')]")
     public WebElement calisanSecimi;
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[14]")
+    @FindBy(xpath = "(//input[@type='checkbox'])[15]")
     public WebElement aliVeli;
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[15]")
+    @FindBy(xpath = "(//input[@type='checkbox'])[16]")
     public WebElement aliVeli2;
 
     @FindBy(xpath = "//button[@class='btn-sm btn-icon TekBtn kaydet']")
@@ -136,7 +136,7 @@ public class PEYK_Pages {
     @FindBy(xpath = "//button[contains(text(),'Onayla')]")
     public WebElement onayla;
 
-    @FindBy(xpath = "(//button[contains(text(),'Seç')])[5]")
+    @FindBy(xpath = "(//button[contains(text(),'Seç')])[6]")
     public WebElement sec;
 
     @FindBy(xpath = "//span[contains(text(),'PDF imzalandı ve gönderiliyor')]")
@@ -677,8 +677,8 @@ public class PEYK_Pages {
     @FindBy(xpath = "//input[@aria-expanded=\"false\"]")
     public WebElement talepFormu;
 
-    @FindBy(xpath = "//span[contains(text(), \"Kabul Ediyorum\")]")
-    public WebElement kabulEdiyorum;
+    @FindBy(xpath = "//input[@id=\"root_Sayı Alanı\"]")
+    public WebElement sayiAlani;
 
     @FindBy(xpath = "//button[contains(text(), \"Kaydet ve Gönder\")]")
     public WebElement kaydetVeGonder;

@@ -62,6 +62,8 @@ public class PEYK_FormStepDefinitions extends Driver{
             }
         } catch (Exception e) {
             System.out.println("E-imza bulunmamaktadır!");
+            //peyk_pages.onayla.click();
+            BrowserUtils.waitFor(2);
             peyk_pages.imzalaGonder.click();
             BrowserUtils.waitFor(1);
             peyk_pages.evet.click();
