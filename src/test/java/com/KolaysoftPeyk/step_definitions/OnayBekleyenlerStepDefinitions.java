@@ -38,9 +38,9 @@ public class OnayBekleyenlerStepDefinitions extends Driver{
             System.out.println("Kayıt bulunamadı");
         }
 
-        peyk_pages.kullanici.click();
+        //peyk_pages.kullanici.click();
         BrowserUtils.waitFor(2);
-        peyk_pages.cikis.click();
+       // peyk_pages.cikis.click();
         closeDriver();
 
     }

@@ -42,7 +42,7 @@ public class Veli_Ali_Calisan_66362170898 extends Driver{
                 peyk_pages.tamam.click();
                 BrowserUtils.waitFor(2);
                 peyk_pages.secilenleriOnayla.click();
-                BrowserUtils.waitFor(2);
+                BrowserUtils.waitFor(3);
                 peyk_pages.evet.click();
                 BrowserUtils.waitFor(2);
             }
