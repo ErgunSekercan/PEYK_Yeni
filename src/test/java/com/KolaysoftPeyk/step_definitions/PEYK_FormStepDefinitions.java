@@ -42,11 +42,13 @@ public class PEYK_FormStepDefinitions extends Driver{
         BrowserUtils.waitFor(2);
         peyk_pages.calisanSecimi.click();
         BrowserUtils.waitFor(1);
-        peyk_pages.aliVeli.click();
+        peyk_pages.aliVeli2.click();
         BrowserUtils.waitFor(1);
         peyk_pages.kaydet.click();
         BrowserUtils.waitFor(1);
         peyk_pages.onayla.click();
+        BrowserUtils.waitFor(3);
+        peyk_pages.tamam.click();
         BrowserUtils.waitFor(3);
 
         try {

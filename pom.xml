@@ -89,7 +89,6 @@
                             <include>**/*PeykRunner.java</include>
                         </includes>
                         <suiteXmlFiles>
-
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
