@@ -8,6 +8,9 @@ import com.KolaysoftPeyk.utility.Driver;
 import io.cucumber.java.tr.Eğerki;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+
 public class PEYK_IslemGecmisiStepDefinitions extends Driver{
 
     PEYK_Pages peyk_pages = new PEYK_Pages();
@@ -34,16 +37,16 @@ public class PEYK_IslemGecmisiStepDefinitions extends Driver{
     }
 
         @Eğerki(": Kayıt Belgesi İndire tıklarsanız çalışana ait istenilen tarih aralığındaki onaylanmış zaman damgalı kayıtlara ulaşabilirsiniz")
-        public void kayıt_belgesi_indire_tıklarsanız_çalışana_ait_istenilen_tarih_aralığındaki_onaylanmış_zaman_damgalı_kayıtlara_ulaşabilirsiniz() {
+        public void kayıt_belgesi_indire_tıklarsanız_çalışana_ait_istenilen_tarih_aralığındaki_onaylanmış_zaman_damgalı_kayıtlara_ulaşabilirsiniz() throws AWTException {
         peyk_pages.calisanIslemKaydiIndir.click();
         BrowserUtils.waitFor(2);
         peyk_pages.startDate.click();
         BrowserUtils.waitFor(2);
-        peyk_pages.bir.click();
+        peyk_pages.otuz.click();
         BrowserUtils.waitFor(2);
         peyk_pages.endDate.click();
         BrowserUtils.waitFor(2);
-        peyk_pages.bes.click();
+        peyk_pages.bir.click();
         BrowserUtils.waitFor(2);
         peyk_pages.kayitBelgesiIndir.click();
         BrowserUtils.waitFor(2);

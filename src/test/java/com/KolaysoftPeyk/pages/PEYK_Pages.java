@@ -123,7 +123,7 @@ public class PEYK_Pages {
     @FindBy(xpath = "//label[contains(text(),'Lütfen çalışan seçimi yapınız.')]")
     public WebElement calisanSecimi;
 
-    @FindBy(xpath = "(//input[@type='checkbox'])[15]")
+    @FindBy(xpath = "(//input[@type='checkbox'])[17]")
     public WebElement aliVeli;
 
     @FindBy(xpath = "(//input[@type='checkbox'])[16]")
@@ -195,10 +195,13 @@ public class PEYK_Pages {
     @FindBy(xpath = "(//input[@id='startDate'])[1]")
     public WebElement startDate;
 
-    @FindBy(xpath = "(//td[@data-value='1' and @class='rdtDay'])[7]")
+    @FindBy(xpath = "(//td[@data-value='1' and @class='rdtDay'])[8]")
     public WebElement bir;
 
-    @FindBy(xpath = "(//td[@data-value='5' and @class='rdtDay'])[8]")
+    @FindBy(xpath = "(//td[@data-value='30' and @class='rdtDay rdtOld'])[7]")
+    public WebElement otuz;
+
+    @FindBy(xpath = "(//td[@data-value='2' and @class='rdtDay'])[8]")
     public WebElement bes;
 
     @FindBy(xpath = "(//input[@id='startDate'])[2]")

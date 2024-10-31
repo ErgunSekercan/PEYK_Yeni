@@ -125,7 +125,7 @@ public class PEYK_FormStepDefinitions extends Driver{
                 if (pin.contains("P")) {
                     peyk_pages.eImzaPassword.click();
                     peyk_pages.eImzaPassword.sendKeys("3944");
-                    BrowserUtils.waitFor(2);
+                    BrowserUtils.waitFor(3);
                     peyk_pages.imzalaGonder.click();
                     peyk_pages.evet.click();
                 }
